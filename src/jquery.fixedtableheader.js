@@ -1,6 +1,6 @@
 /* Copyright (c) 2009 Mustafa OZCAN (http://www.mustafaozcan.net)
  * Released under the MIT license
- * Version: 1.0.2
+ * Version: 1.0.3
  * Requires: jquery.1.3+
  */
 jQuery.fn.fixedtableheader = function (options) {
