@@ -35,18 +35,11 @@ jQuery.fn.fixedtableheader = function (options) {
                     $(this).removeClass(settings.highlightclass);
                 });
             $(window).scroll(function () {
-                if (jQuery.browser.msie && jQuery.browser.version == "6.0")
-                    $clonedTable.css({
-                        "position": "absolute",
-                        "top": $(window).scrollTop(),
-                        "left": $tbl.offset().left
-                    });
-                else
-                    $clonedTable.css({
-                        "position": "fixed",
-                        "top": "0",
-                        "left": $tbl.offset().left - $(window).scrollLeft()
-                    });
+                $clonedTable.css({
+                    "position": "fixed",
+                    "top": "0",
+                    "left": $tbl.offset().left - $(window).scrollLeft()
+                });
                 var sctop = $(window).scrollTop();
                 var elmtop = $tblhfixed.offset().top;
                 if (sctop > elmtop && sctop <= (elmtop + $tbl.height() - $tblhfixed.height()))
